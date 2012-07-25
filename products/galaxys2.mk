@@ -1,5 +1,5 @@
 # Inherit AOSP device configuration for galaxys2.
-$(call inherit-product, device/samsung/galaxys2/full_galaxys2.mk)
+$(call inherit-product, device/samsung/i9100/full_i9100.mk)
 
 # Inherit common product files.
 $(call inherit-product, vendor/aokp/configs/common_phone.mk)
@@ -8,11 +8,11 @@ $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 $(call inherit-product, vendor/aokp/configs/gsm.mk)
 
 # SGS2 overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/galaxys2
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/i9100
 
 # Setup device specific product configuration.
-PRODUCT_DEVICE := galaxys2
-PRODUCT_NAME := aokp_galaxys2
+PRODUCT_DEVICE := i9100
+PRODUCT_NAME := aokp_i9100
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-I9100
 
