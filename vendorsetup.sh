@@ -1,1 +1,1 @@
-add_lunch_combo aokp_galaxys2-userdebug
+add_lunch_combo aokp_i9100-userdebug
