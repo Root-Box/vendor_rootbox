@@ -1,16 +1,15 @@
 # Version information used on all builds
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03H BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=RootBox-JRO03H BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
 # Rom Manager properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=teamkang \
-    ro.aokp.version=RootBOX-$(TARGET_PRODUCT)-JB
+    ro.aokp.version=V2.2-JB
 
-# Goo updater app
+# RootBox OTA Updater
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.developerid=aokp \
-    ro.goo.rom=aokp \
-    ro.goo.version=20
+    otaupdater.otaid=bajee11 \
+    otaupdater.otatime=$(date +"%Y%m%d"-"%H%M") \
+    otaupdater.otaver=2.2
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
