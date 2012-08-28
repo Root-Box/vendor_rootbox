@@ -5,13 +5,13 @@ DATE = $(shell date +%Y%m%d-%H%M)
 
 # Rom Manager properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aokp.version=V2.2-I9100
+    ro.aokp.version=RootBox_JB_V2.3
 
 # RootBox OTA Updater
 PRODUCT_PROPERTY_OVERRIDES += \
     otaupdater.otaid=bajee11 \
     otaupdater.otatime=$(DATE) \
-    otaupdater.otaver=2.2
+    otaupdater.otaver=2.3
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
