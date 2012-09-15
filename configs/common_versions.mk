@@ -7,6 +7,12 @@ DATE = $(shell date +%Y%m%d-%H%M)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.aokp.version=RootBox_JB_V2.5
 
+# Goo updater app
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.developerid=Bajee \
+    ro.goo.rom=RootBox \
+    ro.goo.version=2.5
+
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
