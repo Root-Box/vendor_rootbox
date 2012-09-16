@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
     vendor/aokp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
     vendor/aokp/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
-    vendor/aokp/prebuilt/common/app/OTAUpdater.apk:system/app/GooManager.apk
+    vendor/aokp/prebuilt/common/app/GooManager.apk:system/app/GooManager.apk
 
 # init.d
 PRODUCT_COPY_FILES += \
