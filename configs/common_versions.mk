@@ -5,7 +5,7 @@ DATE = $(shell date +%Y%m%d-%H%M)
 
 # Rom Manager properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aokp.version=RootBox_JB_V2.5
+    ro.aokp.version=RootBox-JB-V2.5
 
 # Goo updater app
 PRODUCT_PROPERTY_OVERRIDES += \
