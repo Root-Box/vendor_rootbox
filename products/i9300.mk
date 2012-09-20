@@ -7,9 +7,6 @@ $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 # Inherit GSM common stuff
 $(call inherit-product, vendor/aokp/configs/gsm.mk)
 
-# SGS3 overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/i9300
-
 # Setup device specific product configuration.
 PRODUCT_DEVICE := i9300
 PRODUCT_NAME := aokp_i9300
@@ -17,8 +14,7 @@ PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-I9300
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9300 TARGET_DEVICE=GT-I9300 BUILD_FINGERPRINT=samsung/GT-I9300/GT-I9300:4.1.1/JRO03L/I9300XXALE8:user/release-keys PRIVATE_BUILD_DESC="GT-I9300-user 4.1.1 JRO03L I9300XXALE8 release-keys"
-PRODUCT_RELEASE_NAME := GT-I9300
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m0xx TARGET_DEVICE=m0 BUILD_FINGERPRINT="samsung/m0xx/m0:4.1.1/JRO03L/I9300XXALE8:user/release-keys" PRIVATE_BUILD_DESC="m0xx-user 4.1.1 JRO03L I9300XXALE8 release-keys"
 
 # Copy maguro specific prebuilt files
 PRODUCT_COPY_FILES += \
