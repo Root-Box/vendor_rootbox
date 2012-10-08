@@ -11,7 +11,7 @@ $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 $(call inherit-product, vendor/aokp/configs/gsm.mk)
 
 # SGS2 overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/i9100
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/i9100p
 
 # Setup device specific product configuration.
 PRODUCT_DEVICE := i9100
