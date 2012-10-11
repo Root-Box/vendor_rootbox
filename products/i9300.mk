@@ -14,7 +14,7 @@ PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-I9300
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m0xx TARGET_DEVICE=m0 BUILD_FINGERPRINT="samsung/m0xx/m0:4.1.1/JRO03L/I9300XXDLIB:user/release-keys" PRIVATE_BUILD_DESC="m0xx-user 4.1.1 JRO03L I9300XXDLIB release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m0xx TARGET_DEVICE=m0 BUILD_FINGERPRINT="samsung/m0xx/m0:4.1.2/JZO54K/I9300XXDLIB:user/release-keys" PRIVATE_BUILD_DESC="m0xx-user 4.1.2 JZO54K I9300XXDLIB release-keys"
 
 # Copy maguro specific prebuilt files
 PRODUCT_COPY_FILES += \
