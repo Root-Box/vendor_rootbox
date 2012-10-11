@@ -5,13 +5,13 @@ DATE = $(shell date +%Y%m%d-%H%M)
 
 # Rom Manager properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aokp.version=RootBox-JB-$(TARGET_PRODUCT)-V2.8
+    ro.aokp.version=RootBox-JB-$(TARGET_PRODUCT)-V2.9
 
 # Goo updater app
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=Bajee \
     ro.goo.rom=RootBox \
-    ro.goo.version=280
+    ro.goo.version=290
 
 
 # Camera shutter sound property
