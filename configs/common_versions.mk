@@ -1,17 +1,23 @@
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JZO54K BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
-DATE = $(shell date +%Y%m%d-%H%M)
+DATE = $(shell date +%Y%m%d)
 
-# Rom Manager properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aokp.version=RootBox-JB-$(TARGET_PRODUCT)-V2.9
-
-# Goo updater app
+ifneq ($(RB_BUILD),)
+# RootBox Official properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=Bajee \
     ro.goo.rom=RootBox \
-    ro.goo.version=290
+    ro.goo.version=$(DATE) \
+    ro.aokp.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
+else
+# RootBox Nightlies properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.developerid=Bajee \
+    ro.goo.rom=RootBoxNightlies \
+    ro.goo.version=$(DATE) \
+    ro.aokp.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
+endif
 
 
 # Camera shutter sound property
