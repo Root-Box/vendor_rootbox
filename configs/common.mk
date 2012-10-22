@@ -82,10 +82,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
-PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
-    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
-
 # ParanoidAndroid Packages
 PRODUCT_PACKAGES += \
     ParanoidPreferences \
