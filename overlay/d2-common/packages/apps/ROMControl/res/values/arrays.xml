@@ -9,8 +9,8 @@
 		<item>AIRPLANE_MODE</item>
 		<item>VIBRATE</item>
 		<item>SILENT</item>
-                <item>LTE</item>
 		<item>SYNC</item>
+                <item>LTE</item>
 		<item>DATA</item>
 		<item>2G</item>
 		<item>AP</item>
