@@ -948,7 +948,7 @@
   <apn carrier="SPICE MMS" mcc="405" mnc="911" apn="spicemms" user="User Mobile number" password="spice" mmsc="http://10.200.200.3:8514" mmsproxy="10.200.200.3" mmsport="8080" type="mms" />
   <apn carrier="Mobilink" mcc="410" mnc="01" apn="connect.mobilinkworld.com" type="default,supl" />
   <apn carrier="Mobilink MMS" mcc="410" mnc="01" apn="mms.mobilinkworld.com" user="mobilink" password="mobilink" mmsc="http://mms" mmsproxy="172.025.020.012" mmsport="8080" type="mms" />
-  <apn carrier="Ufone MMS" mcc="410" mnc="03" apn="ufone.mms" mmsc="http://www.ufone.com" mmsproxy="172.16.13.27" mmsport="8080" type="mms" />
+  <apn carrier="Ufone MMS" mcc="410" mnc="03" apn="ufone.pmms" mmsc="http://www.ufonemms.com:80" mmsproxy="172.16.13.27" mmsport="8080" type="mms" />
   <apn carrier="Ufone" mcc="410" mnc="03" apn="ufone.pinternet" type="default,supl" />
   <apn carrier="Zong" mcc="410" mnc="04" apn="zonginternet" type="default,supl" />
   <apn carrier="Zong MMS" mcc="410" mnc="04" apn="zongmms" mmsc="10.81.6.11" mmsproxy="10.81.6.11" mmsport="8080" type="mms" />
