@@ -1,6 +1,6 @@
 # NFC prebuilts
 
-VENDOR_PATH := vendor/aokp/prebuilt/common
+VENDOR_PATH := vendor/rootbox/prebuilt/common
 
 PRODUCT_COPY_FILES += \
     packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
@@ -13,7 +13,7 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/app/Nfc.apk:system/app/Nfc.apk \
     $(VENDOR_PATH)/app/Tag.apk:system/app/Tag.apk
 
-LOCAL_PATH := vendor/aokp/prebuilt/common/etc
+LOCAL_PATH := vendor/rootbox/prebuilt/common/etc
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)

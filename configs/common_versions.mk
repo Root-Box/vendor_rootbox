@@ -9,14 +9,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=Bajee \
     ro.goo.rom=RootBox \
     ro.goo.version=$(DATE) \
-    ro.aokp.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
+    ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
 else
 # RootBox Nightlies properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=Bajee \
     ro.goo.rom=RootBoxNightlies \
     ro.goo.version=$(DATE) \
-    ro.aokp.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
+    ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
 endif
 
 

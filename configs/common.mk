@@ -1,10 +1,10 @@
-$(call inherit-product-if-exists, vendor/aokp/prebuilt/prebuilts.mk)
+$(call inherit-product-if-exists, vendor/rootbox/prebuilt/prebuilts.mk)
 
 # Common overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
 
 # T-Mobile theme engine
-include vendor/aokp/configs/themes_common.mk
+include vendor/rootbox/configs/themes_common.mk
 
 PRODUCT_PACKAGES += \
     AOKPtips \
@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
 
 # Use prebuilt su until fixed when built
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/xbin/su:system/xbin/su
+    vendor/rootbox/prebuilt/common/xbin/su:system/xbin/su
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -36,17 +36,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0
 
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
-    vendor/aokp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    vendor/aokp/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
-    vendor/aokp/prebuilt/common/app/GooManager.apk:system/app/GooManager.apk
+    vendor/rootbox/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
+    vendor/rootbox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    vendor/rootbox/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
+    vendor/rootbox/prebuilt/common/app/GooManager.apk:system/app/GooManager.apk
 
 # init.d
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
-    vendor/aokp/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
-    vendor/aokp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/aokp/prebuilt/common/etc/sysinit:system/bin/sysinit
+    vendor/rootbox/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
+    vendor/rootbox/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+    vendor/rootbox/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/rootbox/prebuilt/common/etc/sysinit:system/bin/sysinit
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -86,20 +86,20 @@ PRODUCT_PACKAGES += \
     ParanoidPreferences \
 
 # ParanoidAndroid Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/$(TARGET_PRODUCT)
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/$(TARGET_PRODUCT)
 
 # Allow device family to add overlays and use a same prop.conf
 ifneq ($(OVERLAY_TARGET),)
-    PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/$(OVERLAY_TARGET)
+    PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/$(OVERLAY_TARGET)
     PA_CONF_SOURCE := $(OVERLAY_TARGET)
 else
     PA_CONF_SOURCE := $(TARGET_PRODUCT)
 endif
 
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
-    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
+    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
+    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
 
 # Inherit common build.prop overrides
--include vendor/aokp/configs/common_versions.mk
+-include vendor/rootbox/configs/common_versions.mk

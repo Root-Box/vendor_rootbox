@@ -2,14 +2,14 @@
 $(call inherit-product, device/samsung/i9300/full_i9300.mk)
 
 # Inherit common product files.
-$(call inherit-product, vendor/aokp/configs/common_phone.mk)
+$(call inherit-product, vendor/rootbox/configs/common_phone.mk)
 
 # Inherit GSM common stuff
-$(call inherit-product, vendor/aokp/configs/gsm.mk)
+$(call inherit-product, vendor/rootbox/configs/gsm.mk)
 
 # Setup device specific product configuration.
 PRODUCT_DEVICE := i9300
-PRODUCT_NAME := aokp_i9300
+PRODUCT_NAME := rootbox_i9300
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-I9300
 
@@ -18,4 +18,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m0xx TARGET_DEVICE=m0 BUILD_FINGERP
 
 # Copy maguro specific prebuilt files
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+    vendor/rootbox/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
