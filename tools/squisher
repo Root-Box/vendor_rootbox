@@ -5,7 +5,7 @@
 # cyanogen
 # AOKP
 
-. $ANDROID_BUILD_TOP/vendor/aokp/tools/colors
+. $ANDROID_BUILD_TOP/vendor/rootbox/tools/colors
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
