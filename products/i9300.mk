@@ -7,6 +7,9 @@ $(call inherit-product, vendor/rootbox/configs/common_phone.mk)
 # Inherit GSM common stuff
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 
+# I9300 overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/i9300
+
 # Setup device specific product configuration.
 PRODUCT_DEVICE := i9300
 PRODUCT_NAME := rootbox_i9300
