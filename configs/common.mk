@@ -39,7 +39,8 @@ PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
     vendor/rootbox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
     vendor/rootbox/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
-    vendor/rootbox/prebuilt/common/app/GooManager.apk:system/app/GooManager.apk
+    vendor/rootbox/prebuilt/common/app/GooManager.apk:system/app/GooManager.apk \
+    vendor/rootbox/prebuilt/common/app/Onandroid.apk:system/app/Onandroid.apk 
 
 # init.d
 PRODUCT_COPY_FILES += \
@@ -47,6 +48,10 @@ PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     vendor/rootbox/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/rootbox/prebuilt/common/etc/sysinit:system/bin/sysinit
+
+# Onandroid script
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/common/onandroid/onandroid:system/bin/onandroid
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
