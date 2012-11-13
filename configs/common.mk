@@ -86,25 +86,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
-# ParanoidAndroid Packages
-PRODUCT_PACKAGES += \
-    ParanoidPreferences \
-
-# ParanoidAndroid Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/$(TARGET_PRODUCT)
-
-# Allow device family to add overlays and use a same prop.conf
-ifneq ($(OVERLAY_TARGET),)
-    PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/$(OVERLAY_TARGET)
-    PA_CONF_SOURCE := $(OVERLAY_TARGET)
-else
-    PA_CONF_SOURCE := $(TARGET_PRODUCT)
+# device common prebuilts
+ifneq ($(DEVICE_COMMON),)
+    -include vendor/aokp/prebuilt/$(DEVICE_COMMON)/prebuilt.mk
 endif
 
+# device specific prebuilts
+-include vendor/aokp/prebuilt/$(TARGET_PRODUCT)/prebuilt.mk
+
+BOARD := $(subst pa_,,$(TARGET_PRODUCT))
+
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
-    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
+    vendor/aokp/prebuilt/$(DEVICE_COMMON).conf:system/etc/paranoid/properties.conf \
+    vendor/aokp/prebuilt/$(DEVICE_COMMON).conf:system/etc/paranoid/backup.conf
 
 # Inherit common build.prop overrides
 -include vendor/rootbox/configs/common_versions.mk

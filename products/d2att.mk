@@ -9,6 +9,9 @@ $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/d2-common
 
+# OVERLAY_TARGET adds overlay asset source
+OVERLAY_TARGET := pa_xhdpi
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_d2att
 PRODUCT_BRAND := Samsung

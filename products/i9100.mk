@@ -10,6 +10,9 @@ $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 # SGS2 overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/i9100
 
+# OVERLAY_TARGET adds overlay asset source
+OVERLAY_TARGET := pa_hdpi
+
 # Setup device specific product configuration.
 PRODUCT_DEVICE := i9100
 PRODUCT_NAME := rootbox_i9100
