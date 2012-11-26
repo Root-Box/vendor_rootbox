@@ -1,10 +1,5 @@
-$(call inherit-product-if-exists, vendor/rootbox/prebuilt/prebuilts.mk)
-
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
-
-# T-Mobile theme engine
-include vendor/rootbox/configs/themes_common.mk
 
 PRODUCT_PACKAGES += \
     AOKPtips \
@@ -17,6 +12,7 @@ PRODUCT_PACKAGES += \
     MusicVisualization \
     NoiseField \
     Onandroid \
+    PerformanceControl \
     PhaseBeam \
     ROMControl \
     SuperSU \
@@ -104,3 +100,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit common build.prop overrides
 -include vendor/rootbox/configs/common_versions.mk
+
+# T-Mobile theme engine
+include vendor/rootbox/configs/themes_common.mk
