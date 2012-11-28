@@ -9,11 +9,14 @@ include vendor/rootbox/configs/themes_common.mk
 PRODUCT_PACKAGES += \
     AOKPtips \
     AppWidgetPicker \
+    GooManager \
     LatinImeDictionary \
     Microbes \
     MusicFX \
     MusicVisualization \
     NoiseField \
+    Onandroid \
+    ParanoidPreferences \
     PhaseBeam \
     ROMControl \
     SuperSU \
@@ -38,9 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
     vendor/rootbox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    vendor/rootbox/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
-    vendor/rootbox/prebuilt/common/app/GooManager.apk:system/app/GooManager.apk \
-    vendor/rootbox/prebuilt/common/app/Onandroid.apk:system/app/Onandroid.apk 
+    vendor/rootbox/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf 
 
 # init.d
 PRODUCT_COPY_FILES += \
