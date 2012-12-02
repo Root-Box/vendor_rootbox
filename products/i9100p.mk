@@ -4,9 +4,6 @@ $(call inherit-product, device/samsung/i9100/full_i9100.mk)
 # Inherit NFC files.
 $(call inherit-product, vendor/rootbox/configs/nfc_i9100p.mk)
 
-# Inherit common product files.
-$(call inherit-product, vendor/rootbox/configs/common_phone.mk)
-
 # Inherit GSM common stuff
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 

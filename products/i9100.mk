@@ -1,9 +1,6 @@
 # Inherit AOSP device configuration for galaxys2.
 $(call inherit-product, device/samsung/i9100/full_i9100.mk)
 
-# Inherit common product files.
-$(call inherit-product, vendor/rootbox/configs/common_phone.mk)
-
 # Inherit GSM common stuff
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 
