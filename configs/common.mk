@@ -8,15 +8,13 @@ PRODUCT_PACKAGES += \
     LatinImeGoogle \
     LatinImeDictionary \
     Microbes \
-    MusicFX \
-    MusicVisualization \
-    NoiseField \
+    NovaLauncher \
     Onandroid \
     PerformanceControl \
-    PhaseBeam \
     ROMControl \
     SuperSU \
     SwagPapers \
+    Torch \
     UnicornPorn
 
 # Use prebuilt su until fixed when built
@@ -46,7 +44,7 @@ PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
     vendor/rootbox/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     vendor/rootbox/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/rootbox/prebuilt/common/etc/sysinit:system/bin/sysinit
+    vendor/rootbox/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Onandroid script
 PRODUCT_COPY_FILES += \
@@ -55,14 +53,6 @@ PRODUCT_COPY_FILES += \
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# Live Wallpapers for all
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    VisualizationWallpapers \
-    librs_jni
 
 PRODUCT_PACKAGES += \
     openvpn \
@@ -86,18 +76,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # device common prebuilts
-ifneq ($(OVERLAY_TARGET),)
-    -include vendor/rootbox/prebuilt/$(OVERLAY_TARGET)/prebuilt.mk
-endif
+#ifneq ($(OVERLAY_TARGET),)
+#    -include vendor/rootbox/prebuilt/$(OVERLAY_TARGET)/prebuilt.mk
+#endif
 
 # device specific prebuilts
--include vendor/rootbox/prebuilt/$(TARGET_PRODUCT)/prebuilt.mk
+#-include vendor/rootbox/prebuilt/$(TARGET_PRODUCT)/prebuilt.mk
 
-BOARD := $(subst pa_,,$(TARGET_PRODUCT))
+#BOARD := $(subst pa_,,$(TARGET_PRODUCT))
 
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/$(OVERLAY_TARGET).conf:system/etc/paranoid/properties.conf \
-    vendor/rootbox/prebuilt/$(OVERLAY_TARGET).conf:system/etc/paranoid/backup.conf
+#PRODUCT_COPY_FILES += \
+#    vendor/rootbox/prebuilt/$(OVERLAY_TARGET).conf:system/etc/paranoid/properties.conf \
+#    vendor/rootbox/prebuilt/$(OVERLAY_TARGET).conf:system/etc/paranoid/backup.conf
 
 # Inherit common build.prop overrides
 -include vendor/rootbox/configs/common_versions.mk
