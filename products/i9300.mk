@@ -1,6 +1,9 @@
 # Inherit AOSP device configuration for galaxys3.
 $(call inherit-product, device/samsung/i9300/full_i9300.mk)
 
+# Inherit AOKP common bits
+$(call inherit-product, vendor/rootbox/configs/common.mk)
+
 # Inherit GSM common stuff
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 

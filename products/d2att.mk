@@ -1,9 +1,13 @@
 # Inherit AOSP device configuration for d2att.
 $(call inherit-product, device/samsung/d2att/full_d2att.mk)
 
+# Inherit AOKP common bits
+$(call inherit-product, vendor/rootbox/configs/common.mk)
+
 # Inherit GSM common stuff.
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 
+# D2 Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/d2-common
 
 # OVERLAY_TARGET adds overlay asset source
