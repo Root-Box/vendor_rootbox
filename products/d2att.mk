@@ -8,7 +8,7 @@ $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 $(call inherit-product, vendor/rootbox/configs/common.mk)
 
 # D2 Overlays
-#PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/d2-common
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/d2-common
 
 # OVERLAY_TARGET adds overlay asset source
 #OVERLAY_TARGET := pa_xhdpi
