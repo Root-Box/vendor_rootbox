@@ -76,20 +76,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
-# device common prebuilts
-#ifneq ($(OVERLAY_TARGET),)
-#    -include vendor/rootbox/prebuilt/$(OVERLAY_TARGET)/prebuilt.mk
-#endif
-
-# device specific prebuilts
-#-include vendor/rootbox/prebuilt/$(TARGET_PRODUCT)/prebuilt.mk
-
-#BOARD := $(subst pa_,,$(TARGET_PRODUCT))
-
-#PRODUCT_COPY_FILES += \
-#    vendor/rootbox/prebuilt/$(OVERLAY_TARGET).conf:system/etc/paranoid/properties.conf \
-#    vendor/rootbox/prebuilt/$(OVERLAY_TARGET).conf:system/etc/paranoid/backup.conf
-
 # Inherit common build.prop overrides
 -include vendor/rootbox/configs/common_versions.mk
 
