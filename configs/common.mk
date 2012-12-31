@@ -10,13 +10,13 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinImeDictionary \
     Microbes \
-    NovaLauncher \
     Onandroid \
     PerformanceControl \
     ROMControl \
     SuperSU \
     SwagPapers \
     Torch \
+    Trebuchet \
     UnicornPorn \
     LockClock
 
