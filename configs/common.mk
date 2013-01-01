@@ -4,6 +4,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
 # Common dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
+# AOKP Packages
 PRODUCT_PACKAGES += \
     AOKPtips \
     AppWidgetPicker \
@@ -16,9 +17,15 @@ PRODUCT_PACKAGES += \
     SuperSU \
     SwagPapers \
     Torch \
-    Trebuchet \
-    UnicornPorn \
-    LockClock
+    UnicornPorn
+
+# CM Packages
+PRODUCT_PACKAGES += \
+        audio_effects.conf \
+	DSPManager \
+        libcyanogen-dsp \
+        LockClock  \
+        Trebuchet
 
 # Use prebuilt su until fixed when built
 PRODUCT_COPY_FILES += \
