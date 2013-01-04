@@ -9,7 +9,7 @@ PRODUCT_PACKAGES += \
     AOKPtips \
     AppWidgetPicker \
     GooManager \
-    LatinImeDictionary \
+    LatinImeDictionaryPack \
     Microbes \
     Onandroid \
     PerformanceControl \
