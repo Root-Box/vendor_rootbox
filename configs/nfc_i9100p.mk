@@ -3,15 +3,12 @@
 VENDOR_PATH := vendor/rootbox/prebuilt/common
 
 PRODUCT_COPY_FILES += \
-    packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     $(VENDOR_PATH)/lib/hw/nfc.exynos4.so:system/lib/hw/nfc.exynos4.so \
     $(VENDOR_PATH)/lib/libnfc.so:system/lib/libnfc.so \
     $(VENDOR_PATH)/lib/libnfc_jni.so:system/lib/libnfc_jni.so \
-    $(VENDOR_PATH)/lib/libnfc_ndef.so:system/lib/libnfc_ndef.so \
-    $(VENDOR_PATH)/app/Nfc.apk:system/app/Nfc.apk \
-    $(VENDOR_PATH)/app/Tag.apk:system/app/Tag.apk
+    $(VENDOR_PATH)/lib/libnfc_ndef.so:system/lib/libnfc_ndef.so
 
 LOCAL_PATH := vendor/rootbox/prebuilt/common/etc
 
@@ -26,4 +23,6 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 PRODUCT_PACKAGES += \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    Nfc \
+    Tag
