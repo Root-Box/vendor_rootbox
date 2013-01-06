@@ -2,7 +2,7 @@
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
 
 # Common dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/dictionaries
 
 # AOKP Packages
 PRODUCT_PACKAGES += \

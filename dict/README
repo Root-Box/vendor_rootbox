@@ -34,7 +34,7 @@ Usage: makedict [-s <unigrams.xml> [-b <bigrams.xml>] [-c <shortcuts_and_whiteli
      such as "robin" and "Robin".
 
 Possible flag usages:
-e = ?
+e = ethnic slur
 n = nouns
 p = pop-culture reference
 r = rude?
