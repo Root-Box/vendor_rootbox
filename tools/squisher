@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Squish a CM otapackage for distribution
 #
@@ -22,7 +22,7 @@ else
 fi
 
 if [ -z "$OUT" -o ! -d "$OUT" ]; then
-	echo "ERROR: $0 only works with a full build environment. $OUT should exist."
+	echo -e "ERROR: $0 only works with a full build environment. $OUT should exist."
 	exit 1
 fi
 
@@ -34,7 +34,7 @@ else
     OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$USER.zip
 fi
 if [ ! -f "$OTAPACKAGE" ]; then
-	echo "$OTAPACKAGE doesn't exist!";
+	echo -e "$OTAPACKAGE doesn't exist!";
 	exit 1
 fi
 
@@ -54,38 +54,38 @@ if [ "$WANT_SQUASHFS" -eq 1 ]; then
 	MKSQUASHFS_VER_REQ=4
 	if type mksquashfs >/dev/null 2>&1; then
 		if mksquashfs -version | grep -q "version $MKSQUASHFS_VER_REQ"; then :; else
-			echo
-			echo $CL_RED"ERROR: mksquashfs must be at least version $MKSQUASHFS_VER_REQ for this build."$CL_RST
+			echo -e
+			echo -e $CL_RED"ERROR: mksquashfs must be at least version $MKSQUASHFS_VER_REQ for this build."$CL_RST
 			fatal=1
 		fi
 	else
-		echo
-		echo $CL_RED"ERROR: $TARGET_PRODUCT requires mksquashfs."$CL_RST
+		echo -e
+		echo -e $CL_RED"ERROR: $TARGET_PRODUCT requires mksquashfs."$CL_RST
 		fatal=1
 	fi
 
 	if [ "$fatal" -ne 0 ]; then
-		echo
-		echo $CL_YLW"       Unoptimized package is still available at"
-		echo "         $OTAPACKAGE"$CL_RST
+		echo -e
+		echo -e $CL_YLW"       Unoptimized package is still available at"
+		echo -e "         $OTAPACKAGE"$CL_RST
 		exit $fatal
 	fi
 fi
 
 REPACK=$OUT/repack.d
-echo $CL_CYN"Sanitizing environment..."$CL_RST
+echo -e $CL_CYN"Sanitizing environment..."$CL_RST
 rm -rf $REPACK
 mkdir -p $REPACK
-echo
+echo -e
 
 
 # Unpack the otapackage and opticharge all apks
 mkdir $REPACK/ota
 (
 cd $REPACK/ota
-echo $CL_CYN"Unpacking $OTAPACKAGE..."$CL_RST
+echo -e $CL_CYN"Unpacking $OTAPACKAGE..."$CL_RST
 unzip $QUIET $OTAPACKAGE
-echo
+echo -e
 
 # Move all apks to the same directory so xargs can
 # use also with framework-res.apk. This allow process
@@ -149,7 +149,7 @@ sed -i -e 's/rootbox_//' $REPACK/ota/system/build.prop
 echo
 
 # Delete unnecessary binaries
-( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
+( cd $REPACK/ota/system/bin; echo -e $DELETE_BINS | xargs rm -f; )
 
 # Delete leftover wireless driver
 # rm -rf $REPACK/ota/system/lib/modules/*/kernel/drivers/net
@@ -169,19 +169,19 @@ MODVERSION="$VERSION"
 OUTFILE=$OUT/$MODVERSION.zip
 
 # Pack it up and sign
-echo $CL_CYN"Zipping package..."$CL_RST
+echo -e $CL_CYN"Zipping package..."$CL_RST
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
-echo
-echo $CL_CYN"Signing package..."$CL_RST
+echo -e
+echo -e $CL_CYN"Signing package..."$CL_RST
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
 	-jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
-echo
-echo $CL_CYN"Cleaning up..."$CL_RST
+echo -e
+echo -e $CL_CYN"Cleaning up..."$CL_RST
 rm -rf $REPACK
-echo
+echo -e
 
 # Create a md5 checksum image of the repacked package
 (
@@ -191,18 +191,19 @@ $MD5 $img >$img.md5sum
 ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
 echo
 echo  -e $CL_BLU"  ____                    __    ____"                    
-echo  " /\  _'\                 /\ \__/\  _'\ "
-echo  " \ \ \L\ \    ___     ___\ \ ,_\ \ \L\ \    ___   __  _"
-echo  "  \ \ ,  /   / __'\  / __'\ \ \/\ \  _ <   / __ \/\ \/'\ "
-echo  "   \ \ \ \ \/\ \L\ \/\ \L\ \ \ \_\ \ \L\ \/\ \L\ \/>  </"
-echo  "    \ \_\ \_\ \____/\ \____/\ \_\ \ \____/\ \____//\_/\_\ "
-echo  "     \/_/\/ /\/___/  \/___/  \/__/ \/___/  \/___/ \//\/_/ "
+echo -e  " /\  _'\                 /\ \__/\  _'\ "
+echo -e  " \ \ \L\ \    ___     ___\ \ ,_\ \ \L\ \    ___   __  _"
+echo -e  "  \ \ ,  /   / __'\  / __'\ \ \/\ \  _ <   / __ \/\ \/'\ "
+echo -e  "   \ \ \ \ \/\ \L\ \/\ \L\ \ \ \_\ \ \L\ \/\ \L\ \/>  </"
+echo -e  "    \ \_\ \_\ \____/\ \____/\ \_\ \ \____/\ \____//\_/\_\ "
+echo -e  "     \/_/\/ /\/___/  \/___/  \/__/ \/___/  \/___/ \//\/_/ "
 echo
-echo $CL_CYN"=========RootBox Package complete========="$CL_RST
-echo $CL_CYN"Package Size:"$CL_MAG"$ZIPSIZE"$CL_RST
-echo $CL_MAG"$OUTFILE"$CL_RST
-echo $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
-echo
+echo -e $CL_CYN"===========-RootBox Package complete-==========="$CL_RST
+echo -e $CL_CYN"zip:"$CL_MAG" $OUTFILE"$CL_RST
+echo -e $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+echo -e $CL_CYN"size:"$CL_MAG" $ZIPSIZE"$CL_RST
+echo -e $CL_CYN"========================================"$CL_RST
+echo -e
 )
 
 exit 0
