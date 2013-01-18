@@ -11,13 +11,17 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinImeDictionaryPack \
     Microbes \
-    Onandroid \
     PerformanceControl \
     ROMControl \
     SuperSU \
     SwagPapers \
     Torch \
     UnicornPorn
+
+# RootBox Packages
+PRODUCT_PACKAGES += \
+    XposedDPI \
+    XposedInstaller
 
 # CM Packages
 PRODUCT_PACKAGES += \
