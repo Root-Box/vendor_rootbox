@@ -8,10 +8,7 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 
 # i9100g overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/i9100g
-
-# OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_hdpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s2-common
 
 # Setup device specific product configuration.
 PRODUCT_DEVICE := i9100g

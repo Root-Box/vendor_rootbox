@@ -7,8 +7,8 @@ $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 # Inherit AOKP common bits
 $(call inherit-product, vendor/rootbox/configs/common.mk)
 
-# D2 Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/d2-common
+# S3 Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s3-common
 
 # OVERLAY_TARGET adds overlay asset source
 #OVERLAY_TARGET := pa_xhdpi

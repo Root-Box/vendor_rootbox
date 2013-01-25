@@ -8,7 +8,7 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
 
 # SGS2 overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/i9100
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/n7000
 
 # Setup device specific product configuration.
 PRODUCT_DEVICE := n7000

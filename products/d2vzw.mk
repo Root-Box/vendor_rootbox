@@ -10,8 +10,8 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # Inherit common Verizon Wireless Perms and Lib
 $(call inherit-product, vendor/rootbox/configs/vzw.mk)
 
-# D2 Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/d2-common
+# S3 Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s3-common
 
 
 # Setup device specific product configuration.
