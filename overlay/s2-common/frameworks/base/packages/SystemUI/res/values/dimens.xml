@@ -26,7 +26,7 @@
     <!-- The width of the notification panel window -->
     <dimen name="notification_panel_width">270dp</dimen>
     <!-- The height of the notification panel title -->
-    <dimen name="notification_panel_title_height">100dp</dimen>
+    <dimen name="notification_panel_title_height">120dp</dimen>
     <!--  Amount of Margin to offset NavRing in Portrait Mode -->
     <dimen name="navring_left_margin_port">-300dp</dimen>
     <!--  Amount of Margin to offset NavRing in Landscape Mode -->
