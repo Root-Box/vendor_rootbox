@@ -39,6 +39,8 @@
         <item>SYNC</item>
         <item>NFC</item>
         <item>USBTETHER</item>
+        <item>POWERMENU</item>
+        <item>PROFILE</item>
     </string-array>
     <string-array name="available_toggles_values" translatable="false">
         <item>@string/toggle_user</item>
@@ -58,6 +60,8 @@
         <item>@string/toggle_sync</item>
         <item>@string/toggle_nfc</item>
         <item>@string/toggle_usb_tether</item>
+        <item>@string/toggle_powermenu</item>
+        <item>@string/toggle_profile</item>
     </string-array>
 
 </resources>
