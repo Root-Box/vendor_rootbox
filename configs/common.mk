@@ -58,10 +58,6 @@ PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/rootbox/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Onandroid script
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/onandroid/onandroid:system/bin/onandroid
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml

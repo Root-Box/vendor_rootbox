@@ -26,7 +26,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d2vzw TARGET_DEVICE=d2vzw BUILD_FIN
 PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 
-# Copy Onandroid partitions table
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/onandroid/d2att/partlayout4nandroid:system/partlayout4nandroid
-

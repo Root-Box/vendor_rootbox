@@ -23,7 +23,3 @@ PRODUCT_RELEASE_NAME := GT-I9100
 # Copy maguro specific prebuilt files
 PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
-
-# Copy Onandroid partitions table
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/onandroid/s2-common/partlayout4nandroid:system/partlayout4nandroid
