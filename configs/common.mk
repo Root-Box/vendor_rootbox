@@ -28,8 +28,7 @@ PRODUCT_PACKAGES += \
         audio_effects.conf \
 	DSPManager \
         libcyanogen-dsp \
-        LockClock  \
-        Trebuchet
+        LockClock
 
 # Use prebuilt su until fixed when built
 PRODUCT_COPY_FILES += \
