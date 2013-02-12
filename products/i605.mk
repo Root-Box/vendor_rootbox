@@ -8,7 +8,7 @@ $(call inherit-product, vendor/rootbox/configs/cdma.mk)
 $(call inherit-product, vendor/rootbox/configs/common.mk)
 
 # t0ltecdma Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/t0ltecdma
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/note2-common
 
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_i605
