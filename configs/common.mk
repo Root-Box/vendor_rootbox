@@ -14,12 +14,12 @@ PRODUCT_PACKAGES += \
     PerformanceControl \
     ROMControl \
     SuperSU \
-    SwagPapers \
     Torch \
     UnicornPorn
 
 # RootBox Packages
 PRODUCT_PACKAGES += \
+    RootBox \
     XposedDPI \
     XposedInstaller
 
