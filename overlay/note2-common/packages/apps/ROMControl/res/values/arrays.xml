@@ -33,6 +33,7 @@
         <item>NAVBARHIDE</item>
         <item>QUICKRECORD</item>
         <item>ROOTBOX</item>
+        <item>SLEEP</item>
     </string-array>
 
     <string-array name="available_toggles_values" translatable="false">
@@ -67,6 +68,7 @@
         <item>@string/toggle_navbar_hide</item>
         <item>@string/toggle_quickrecord</item>
         <item>@string/toggle_rootbox</item>
+        <item>@string/toggle_sleep</item>
     </string-array>
 
         <string-array name="navigation_bar_qty_entries">
