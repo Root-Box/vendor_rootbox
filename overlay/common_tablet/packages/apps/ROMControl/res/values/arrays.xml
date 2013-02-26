@@ -39,8 +39,14 @@
         <item>SYNC</item>
         <item>NFC</item>
         <item>USBTETHER</item>
+        <item>STATUSBAR</item>
         <item>POWERMENU</item>
         <item>PROFILE</item>
+        <item>QUIETHOURS</item>
+        <item>NAVBARHIDE</item>
+        <item>QUICKRECORD</item>
+        <item>ROOTBOX</item>
+        <item>SLEEP</item>
     </string-array>
     <string-array name="available_toggles_values" translatable="false">
         <item>@string/toggle_user</item>
@@ -60,8 +66,14 @@
         <item>@string/toggle_sync</item>
         <item>@string/toggle_nfc</item>
         <item>@string/toggle_usb_tether</item>
+        <item>@string/toggle_statusbar</item>
         <item>@string/toggle_powermenu</item>
         <item>@string/toggle_profile</item>
+        <item>@string/toggle_quiethours</item>
+        <item>@string/toggle_navbar_hide</item>
+        <item>@string/toggle_quickrecord</item>
+        <item>@string/toggle_rootbox</item>
+        <item>@string/toggle_sleep</item>
     </string-array>
 
 </resources>

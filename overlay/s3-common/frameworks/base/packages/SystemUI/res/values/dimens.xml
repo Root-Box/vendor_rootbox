@@ -20,7 +20,7 @@
     <!-- The minimum height of the notification panel window -->
     <dimen name="notification_panel_min_height">250dp</dimen>
     <!-- Bottom margin (from display edge) for status bar panels -->
-    <dimen name="panel_float">0dp</dimen>
+    <dimen name="panel_float">10dp</dimen>
     <!-- The width of the ticker, including the icon -->
     <dimen name="notification_ticker_width">280dp</dimen>
     <!-- The width of the notification panel window -->

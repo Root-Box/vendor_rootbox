@@ -24,7 +24,3 @@ PRODUCT_RELEASE_NAME := n7000
 PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 
-# Copy Onandroid partitions table
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/onandroid/s2-common/partlayout4nandroid:system/partlayout4nandroid
-

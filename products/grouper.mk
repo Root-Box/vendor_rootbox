@@ -19,8 +19,4 @@ PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nak
 PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 
-# Copy Onandroid partitions table
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/onandroid/grouper/partlayout4nandroid:system/partlayout4nandroid
-
 
