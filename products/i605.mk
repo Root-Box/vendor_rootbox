@@ -4,10 +4,10 @@ $(call inherit-product, device/samsung/i605/full_i605.mk)
 # Inherit CDMA common stuff.
 $(call inherit-product, vendor/rootbox/configs/cdma.mk)
 
-# Inherit AOKP common bits
+# Inherit common product files.
 $(call inherit-product, vendor/rootbox/configs/common.mk)
 
-# t0ltecdma Overlays
+# Note 2 Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/note2-common
 
 # Setup device specific product configuration.
