@@ -4,6 +4,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
 # Common dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/dictionaries
 
+# SuperUser
+SUPERUSER_PACKAGE := com.rootbox.superuser
+
 # AOKP Packages
 PRODUCT_PACKAGES += \
     AOKPtips \
@@ -15,7 +18,7 @@ PRODUCT_PACKAGES += \
     ROMControl \
     Superuser \
     su \
-    Torch \
+    Torch
 
 # RootBox Packages
 PRODUCT_PACKAGES += \
