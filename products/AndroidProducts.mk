@@ -10,6 +10,8 @@ $(LOCAL_DIR)/l900.mk \
 $(LOCAL_DIR)/maguro.mk \
 $(LOCAL_DIR)/mako.mk \
 $(LOCAL_DIR)/n7000.mk \
+$(LOCAL_DIR)/d710.mk \
+$(LOCAL_DIR)/n7100.mk \
 $(LOCAL_DIR)/n7100.mk \
 $(LOCAL_DIR)/toro.mk \
 $(LOCAL_DIR)/t0lte.mk
