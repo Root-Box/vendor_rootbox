@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
         libcyanogen-dsp \
         LockClock
 
+# RootBox build.prop tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.enable.amr.wideband=1
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
