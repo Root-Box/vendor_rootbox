@@ -4,11 +4,11 @@ $(call inherit-product, device/samsung/l900/full_l900.mk)
 # Inherit CDMA common stuff.
 $(call inherit-product, vendor/rootbox/configs/cdma.mk)
 
-# Inherit common product files.
+# Inherit RootBox common bits
 $(call inherit-product, vendor/rootbox/configs/common.mk)
 
-# Note 2 Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/note2-common
+# Galaxy Note Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/note-common
 
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_l900
