@@ -8,7 +8,7 @@
     <bool name="has_color_tuning">false</bool>
 
     <!-- Whether device has led charging feature -->
-    <bool name="has_led_charging_feature">true</bool>
+    <bool name="has_led_charging_feature">false</bool>
 
     <!-- Whether or not to display the Spen settings -->
     <bool name="config_stylusGestures">true</bool>
