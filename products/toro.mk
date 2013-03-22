@@ -10,6 +10,10 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # Tuna Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/tuna
 
+# Hybrig Settings
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/hybrid_xhdpi.conf:system/etc/beerbong/properties.conf
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_toro
 PRODUCT_BRAND := google

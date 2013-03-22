@@ -7,6 +7,10 @@ $(call inherit-product, vendor/rootbox/configs/common_tablet.mk)
 # Grouper Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/grouper
 
+# Hybrig Settings
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/hybrid_tvdpi.conf:system/etc/beerbong/properties.conf
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_grouper
 PRODUCT_BRAND := google

@@ -13,6 +13,10 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # S3 Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s3-common
 
+# Hybrig Settings
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/hybrid_xhdpi.conf:system/etc/beerbong/properties.conf 
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_d2vzw
 PRODUCT_BRAND := Samsung

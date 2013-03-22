@@ -10,6 +10,10 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # Mako Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/mako
 
+# Hybrig Settings
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/hybrid_xhdpi.conf:system/etc/beerbong/properties.conf
+
 # Setup device specific product configuration
 PRODUCT_NAME := rootbox_mako
 PRODUCT_BRAND := google

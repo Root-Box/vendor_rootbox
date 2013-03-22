@@ -10,6 +10,10 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # SGS2 overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s2-common
 
+# Hybrig Settings
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/hybrid_hdpi.conf:system/etc/beerbong/properties.conf 
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_i9100
 PRODUCT_BRAND := Samsung
