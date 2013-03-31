@@ -10,6 +10,9 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # Galaxy Note Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/note-common
 
+# PA OVERLAY_TARGET
+OVERLAY_TARGET := pa_xhdpi
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_l900
 PRODUCT_BRAND := Samsung

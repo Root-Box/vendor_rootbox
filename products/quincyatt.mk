@@ -10,6 +10,9 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # Quincyatt overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/quincyatt
 
+# PA OVERLAY_TARGET
+OVERLAY_TARGET := pa_xhdpi
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_quincyatt
 PRODUCT_BRAND := Samsung

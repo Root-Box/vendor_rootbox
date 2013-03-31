@@ -10,6 +10,9 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # S3 overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s3-common
 
+# PA OVERLAY_TARGET
+OVERLAY_TARGET := pa_i9300
+
 # Setup device specific product configuration.
 PRODUCT_DEVICE := i9300
 PRODUCT_NAME := rootbox_i9300

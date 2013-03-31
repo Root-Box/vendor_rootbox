@@ -7,6 +7,9 @@ $(call inherit-product, vendor/rootbox/configs/common_tablet.mk)
 # Grouper Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/grouper
 
+# PA OVERLAY_TARGET
+OVERLAY_TARGET := pa_tvdpi
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_grouper
 PRODUCT_BRAND := google

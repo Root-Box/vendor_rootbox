@@ -10,6 +10,9 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # SGS2 overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s2-common
 
+# PA OVERLAY_TARGET
+OVERLAY_TARGET := pa_hdpi
+
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_i9100g
 PRODUCT_BRAND := Samsung

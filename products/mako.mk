@@ -10,6 +10,9 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 # Mako Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/mako
 
+# PA OVERLAY_TARGET
+OVERLAY_TARGET := pa_xhdpi
+
 # Setup device specific product configuration
 PRODUCT_NAME := rootbox_mako
 PRODUCT_BRAND := google
