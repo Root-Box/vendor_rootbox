@@ -23,9 +23,7 @@ PRODUCT_PACKAGES += \
 
 # RootBox Packages
 PRODUCT_PACKAGES += \
-    RootBox \
-    XposedDPI \
-    XposedInstaller
+    RootBox
 
 # CM Packages
 PRODUCT_PACKAGES += \
