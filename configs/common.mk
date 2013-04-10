@@ -14,6 +14,7 @@ PRODUCT_PACKAGES += \
     AppWidgetPicker \
     GooManager \
     LatinImeDictionaryPack \
+    mGerrit \
     Microbes \
     PerformanceControl \
     ROMControl \
