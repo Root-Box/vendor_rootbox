@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
     mGerrit \
     Microbes \
     PerformanceControl \
+    PermissionsManager \
     ROMControl \
     Superuser \
     su \
