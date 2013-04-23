@@ -144,7 +144,7 @@ $SED -i \
 	$REPACK/ota/system/build.prop
 
 #Adjust RootBox Version
-printf "Adjusting RootBox Version..."
+echo -e $CL_RED"Adjusting RootBox Version..."$CL_RST
 sed -i -e 's/rootbox_//' $REPACK/ota/system/build.prop
 echo
 
@@ -170,7 +170,7 @@ OUTFILE=$OUT/$MODVERSION.zip
 OVERLAYTARGET=`grep 'ro.pa.family=' $REPACK/ota/system/build.prop | sed -e 's/ro.pa.family=//g'`
 
 # Copy PA overlays
-printf "Copying overlay preferences for $OVERLAYTARGET..."
+echo -e $CL_CYN"Copying overlay preferences for $OVERLAYTARGET..."$CL_RST
 echo
 mkdir $REPACK/ota/system/etc/paranoid/preferences
 mkdir $REPACK/ota/system/etc/paranoid/preferences/images
@@ -211,7 +211,7 @@ echo -e $CL_CYN"===========-RootBox Package complete-==========="$CL_RST
 echo -e $CL_CYN"zip:"$CL_MAG" $OUTFILE"$CL_RST
 echo -e $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
 echo -e $CL_CYN"size:"$CL_MAG" $ZIPSIZE"$CL_RST
-echo -e $CL_CYN"========================================"$CL_RST
+echo -e $CL_CYN"================================================"$CL_RST
 echo -e
 )
 
