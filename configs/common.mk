@@ -16,7 +16,6 @@ PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     mGerrit \
     Microbes \
-    PerformanceControl \
     PermissionsManager \
     ROMControl \
     Superuser \
