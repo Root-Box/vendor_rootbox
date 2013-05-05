@@ -6,6 +6,7 @@ $(LOCAL_DIR)/i605.mk \
 $(LOCAL_DIR)/i9100.mk \
 $(LOCAL_DIR)/i9100g.mk \
 $(LOCAL_DIR)/i9300.mk \
+$(LOCAL_DIR)/jfltecan.mk \
 $(LOCAL_DIR)/l900.mk \
 $(LOCAL_DIR)/maguro.mk \
 $(LOCAL_DIR)/mako.mk \
