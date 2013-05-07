@@ -1,4 +1,5 @@
 add_lunch_combo rootbox_d2att-userdebug
+add_lunch_combo rootbox_d2spr-userdebug
 add_lunch_combo rootbox_d2tmo-userdebug
 add_lunch_combo rootbox_d2vzw-userdebug
 add_lunch_combo rootbox_grouper-userdebug
