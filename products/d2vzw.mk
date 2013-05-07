@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for d2vzw.
 $(call inherit-product, device/samsung/d2vzw/full_d2vzw.mk)
 
-# Inherit GSM common stuff.
+# Inherit CDMA common stuff.
 $(call inherit-product, vendor/rootbox/configs/cdma.mk)
 
 # Inherit common Verizon Wireless Perms and Lib
