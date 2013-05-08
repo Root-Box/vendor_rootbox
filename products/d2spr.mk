@@ -16,7 +16,7 @@ OVERLAY_TARGET := pa_i9300
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_d2spr
 PRODUCT_BRAND := Samsung
-PRODUCT_DEVICE := d2pr
+PRODUCT_DEVICE := d2spr
 PRODUCT_MODEL := SPH-L710
 PRODUCT_MANUFACTURER := Samsung
 
