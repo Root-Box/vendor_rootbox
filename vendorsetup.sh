@@ -2,6 +2,7 @@ add_lunch_combo rootbox_d2att-userdebug
 add_lunch_combo rootbox_d2spr-userdebug
 add_lunch_combo rootbox_d2tmo-userdebug
 add_lunch_combo rootbox_d2vzw-userdebug
+add_lunch_combo rootbox_find5-userdebug
 add_lunch_combo rootbox_grouper-userdebug
 add_lunch_combo rootbox_i605-userdebug
 add_lunch_combo rootbox_i9100-userdebug
