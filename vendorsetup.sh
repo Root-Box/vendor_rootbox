@@ -12,6 +12,7 @@ add_lunch_combo rootbox_jfltecan-userdebug
 add_lunch_combo rootbox_l900-userdebug
 add_lunch_combo rootbox_maguro-userdebug
 add_lunch_combo rootbox_mako-userdebug
+add_lunch_combo rootbox_manta-userdebug
 add_lunch_combo rootbox_n7000-userdebug
 add_lunch_combo rootbox_n7100-userdebug
 add_lunch_combo rootbox_quincyatt-userdebug
