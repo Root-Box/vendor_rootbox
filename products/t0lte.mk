@@ -26,5 +26,5 @@ PRODUCT_RELEASE_NAME := t0lte
 
 # Copy Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_720.zip:system/media/bootanimation.zip
 

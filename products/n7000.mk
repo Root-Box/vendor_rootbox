@@ -26,5 +26,5 @@ PRODUCT_RELEASE_NAME := n7000
 
 # Copy Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
 

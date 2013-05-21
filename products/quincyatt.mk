@@ -25,4 +25,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-I717 TARGET_DEVICE=SGH-I717 BUI
 
 # Copy bootanimation.zip
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
