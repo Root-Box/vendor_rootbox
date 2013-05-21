@@ -144,7 +144,7 @@ $SED -i \
 	$REPACK/ota/system/build.prop
 
 #Adjust RootBox Version
-echo -e $CL_RED"Adjusting RootBox Version..."$CL_RST
+echo -e $CL_GRN"Adjusting RootBox Version..."$CL_RST
 sed -i -e 's/rootbox_//' $REPACK/ota/system/build.prop
 echo
 
@@ -170,7 +170,7 @@ OUTFILE=$OUT/$MODVERSION.zip
 OVERLAYTARGET=`grep 'ro.pa.family=' $REPACK/ota/system/build.prop | sed -e 's/ro.pa.family=//g'`
 
 # Copy PA overlays
-echo -e $CL_CYN"Copying overlay preferences for $OVERLAYTARGET..."$CL_RST
+echo -e $CL_CYN"Copying paranoid android overlay preferences..."$CL_RST
 echo
 mkdir $REPACK/ota/system/etc/paranoid/preferences
 mkdir $REPACK/ota/system/etc/paranoid/preferences/images
@@ -178,10 +178,9 @@ cp -r $ANDROID_BUILD_TOP/vendor/rootbox/prebuilt/preferences/images/* $REPACK/ot
 cp -r $ANDROID_BUILD_TOP/vendor/rootbox/prebuilt/preferences/$OVERLAYTARGET/* $REPACK/ota/system/etc/paranoid/preferences/
 
 # Pack it up and sign
-echo -e $CL_CYN"Zipping package..."$CL_RST
+echo -e $CL_CYN"Zipping & Signing package..."$CL_RST
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
 echo -e
-echo -e $CL_CYN"Signing package..."$CL_RST
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
 	-jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
