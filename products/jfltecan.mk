@@ -1,5 +1,5 @@
 # Inherit AOSP device configuration for t0lte.
-$(call inherit-product, device/samsung/jflteatt/full_jfltecan.mk)
+$(call inherit-product, device/samsung/jfltecan/full_jfltecan.mk)
 
 # Inherit GSM common stuff
 $(call inherit-product, vendor/rootbox/configs/gsm.mk)
