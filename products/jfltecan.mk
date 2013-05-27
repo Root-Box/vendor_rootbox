@@ -11,7 +11,7 @@ $(call inherit-product, vendor/rootbox/configs/common.mk)
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s4-common
 
 # PA OVERLAY_TARGET
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_xxhdpi
 
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_jfltecan
