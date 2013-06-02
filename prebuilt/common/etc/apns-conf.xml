@@ -35,6 +35,7 @@
   <apn carrier="Tele2 NL" mcc="204" mnc="02" apn="internet.tele2.nl" type="default,supl" />
   <apn carrier="Tele2 MMS NL" mcc="204" mnc="02" apn="internet.tele2.nl" mmsc="http://mmsc.tele2.nl" mmsproxy="193.12.40.64" mmsport="8080" type="mms" />
   <apn carrier="Vodafone NL" mcc="204" mnc="04" apn="live.vodafone.com" user="vodafone" password="vodafone" mmsc="http://mmsc.mms.vodafone.nl" mmsproxy="192.168.251.150" mmsport="8799" type="default,supl,mms" />
+  <apn carrier="hollandsnieuwe int." mcc="204" mnc="04" apn="data.dataxs.mobi" type="default" />
   <apn carrier="Vodafone MMS Business" mcc="204" mnc="04" apn="office.vodafone.nl" user="vodafone" password="vodafone" mmsc="http://mmsc.mms.vodafone.nl" mmsproxy="192.168.251.150" mmsport="8799" type="mms" />
   <apn carrier="KPN" mcc="204" mnc="08" apn="internet" user="kpn" password="gprs" type="default,supl" />
   <apn carrier="KPN" mcc="204" mnc="08" apn="portalmmm.nl" mmsc="http://mp.mobiel.kpn/mmsc" mmsproxy="10.10.100.20" mmsport="5080" type="default,supl,mms" />
@@ -89,7 +90,7 @@
   <apn carrier="Vodafone ES MMS" mcc="214" mnc="01" apn="mms.vodafone.net" user="wap@wap" password="wap125" mmsc="http://mmsc.vodafone.es/servlets/mms" mmsproxy="212.73.32.10" mmsport="80" type="mms" />
   <apn carrier="Orange Internet ES" mcc="214" mnc="03" apn="internet" user="orange" password="orange" type="default,supl" />
   <apn carrier="Orange ES MMS" mcc="214" mnc="03" apn="orangemms" user="orange" password="orange" mmsc="http://mms.orange.es" mmsproxy="172.22.188.25" mmsport="8080" type="mms" />
-  <apn carrier="Orange World ES" mcc="214" mnc="03" apn="orangeworld" user="orange" password="orange" proxy="10.32.61.10" port="8080" type="default,supl" />
+  <apn carrier="Orange World ES" mcc="214" mnc="03" apn="orangeworld" user="orange" password="orange" proxy="10.132.61.10" port="8080" type="default,supl" />
   <apn carrier="Yoigo" mcc="214" mnc="04" apn="internet" proxy="010.008.000.036" port="8080" type="default,supl" />
   <apn carrier="Yoigo MMS" mcc="214" mnc="04" apn="mms" mmsc="http://mms" mmsproxy="193.209.134.141" mmsport="80" type="mms" />
   <apn carrier="Tuenti Internet" mcc="214" mnc="05" apn="tuenti.com" user="tuenti" password="tuenti" type="default,supl" />
@@ -528,6 +529,7 @@
   <apn carrier="Koodo SP" mcc="302" mnc="220" apn="sp.koodo.com" proxy="74.49.0.18" port="80" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="74.49.0.18" mmsport="80" type="default,supl,mms" />
   <apn carrier="Mobilicity MMS" mcc="302" mnc="320" apn="mms.davewireless.com" mmsc="http://mms.mobilicity.net" mmsproxy="10.100.3.4" mmsport="8080" type="mms" />
   <apn carrier="Mobilicity" mcc="302" mnc="320" apn="wap.davewireless.com" user="dave" password="password" type="default,supl" />
+  <apn carrier="Fido LTE" mcc="302" mnc="370" apn="ltemobile.apn" mmsc="http://mms.fido.ca" mmsproxy="205.151.11.13" mmsport="80" type="default,supl,mms" />
   <apn carrier="Fido Default" mcc="302" mnc="370" apn="fido-core-appl1.apn" mmsc="http://mms.fido.ca" mmsproxy="205.151.11.13" mmsport="80" type="default,supl,mms" />
   <apn carrier="Fido Internet" mcc="302" mnc="370" apn="internet.fido.ca" type="default,supl" />
   <apn carrier="Fido Tethering" mcc="302" mnc="370" apn="isp.fido.apn" type="default,supl" />
