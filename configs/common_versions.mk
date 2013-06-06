@@ -5,19 +5,24 @@ DATE = $(shell date +%Y%m%d)
 RB_BRANCH=jb-mr1
 
 ifneq ($(RB_BUILD),)
-# RootBox Official properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.developerid=Bajee \
-    ro.goo.rom=RootBox \
-    ro.goo.version=$(DATE) \
-    ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
+    # RootBox Official properties
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.developerid=Bajee \
+        ro.goo.rom=RootBox \
+        ro.goo.version=$(DATE) \
+        ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
 else
-# RootBox Nightlies properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.developerid=Bajee \
-    ro.goo.rom=RootBoxNightlies \
-    ro.goo.version=$(DATE) \
-    ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
+    ifneq ($(RB_NIGHTLY),)
+    # RootBox Nightlies properties
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.developerid=Bajee \
+        ro.goo.rom=RootBoxNightlies \
+        ro.goo.version=$(DATE) \
+        ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
+    else
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-Unofficial-$(DATE)
+    endif
 endif
 
 # needed for statistics
