@@ -27,8 +27,8 @@ endif
 
 # needed for statistics
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.aokp.branch=$(RB_BRANCH) \
-        ro.aokp.device=$(RB_PRODUCT)
+        ro.rootbox.branch=$(RB_BRANCH) \
+        ro.rootbox.device=$(RB_PRODUCT)
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
