@@ -12,7 +12,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s2-common
 
 # PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_hdpi
-PA_PREF_FIX := pa_fix
 
 # Setup device specific product configuration.
 PRODUCT_NAME := rootbox_i9100g
