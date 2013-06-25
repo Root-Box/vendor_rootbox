@@ -9,7 +9,11 @@ add_lunch_combo rootbox_i605-userdebug
 add_lunch_combo rootbox_i9100-userdebug
 add_lunch_combo rootbox_i9100g-userdebug
 add_lunch_combo rootbox_i9300-userdebug
+add_lunch_combo rootbox_jflteatt-userdebug
 add_lunch_combo rootbox_jfltecan-userdebug
+add_lunch_combo rootbox_jfltespr-userdebug
+add_lunch_combo rootbox_jfltetmo-userdebug
+add_lunch_combo rootbox_jfltevzw-userdebug
 add_lunch_combo rootbox_l900-userdebug
 add_lunch_combo rootbox_maguro-userdebug
 add_lunch_combo rootbox_mako-userdebug
