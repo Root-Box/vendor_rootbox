@@ -65,11 +65,6 @@ PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/rootbox/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
-# Camera effects
-PRODUCT_COPY_FILES +=  \
-    vendor/rootbox/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/rootbox/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
 # ParanoidAndroid Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/prebuilt/preferences/$(TARGET_PRODUCT)
 
