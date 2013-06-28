@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for jflte.
 $(call inherit-product, device/samsung/jfltespr/full_jfltespr.mk)
 
-# Inherit GSM common stuff
+# Inherit CDMA common stuff
 $(call inherit-product, vendor/rootbox/configs/cdma.mk)
 
 # Inherit RootBox common bits
