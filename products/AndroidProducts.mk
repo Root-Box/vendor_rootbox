@@ -14,6 +14,7 @@ $(LOCAL_DIR)/jfltecan.mk \
 $(LOCAL_DIR)/jfltespr.mk \
 $(LOCAL_DIR)/jfltetmo.mk \
 $(LOCAL_DIR)/jfltevzw.mk \
+$(LOCAL_DIR)/jfltexx.mk \
 $(LOCAL_DIR)/l900.mk \
 $(LOCAL_DIR)/maguro.mk \
 $(LOCAL_DIR)/mako.mk \
