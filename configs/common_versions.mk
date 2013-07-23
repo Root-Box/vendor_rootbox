@@ -10,6 +10,7 @@ ifneq ($(RB_BUILD),)
         ro.goo.developerid=Bajee \
         ro.goo.rom=RootBox \
         ro.goo.version=$(DATE) \
+        ro.rootbox.build=$(DATE) \
         ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
 else
     ifneq ($(RB_NIGHTLY),)
@@ -18,6 +19,7 @@ else
         ro.goo.developerid=Bajee \
         ro.goo.rom=RootBoxNightlies \
         ro.goo.version=$(DATE) \
+        ro.rootbox.build=$(DATE) \
         ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
     else
     PRODUCT_PROPERTY_OVERRIDES += \
