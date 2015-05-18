@@ -1,2 +1,2 @@
-add_lunch_combo rootbox_find7-userdebug
+add_lunch_combo rb_find7-userdebug
 

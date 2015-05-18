@@ -8,78 +8,29 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/dictionaries
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.rb.superuser
 
-# AOKP Packages
 PRODUCT_PACKAGES += \
-    AOKPtips \
-    AppWidgetPicker \
+    LatinIME \
+    BluetoothExt \
+    CellBroadcastReceiver \
+    libemoji \
     LatinImeDictionaryPack \
     mGerrit \
     Microbes \
-    PermissionsManager \
-    ROMControl \
-    Superuser \
+    Stk \
     su \
-    Torch
+    SwagPapers \
+    Torch \
+    Eleven
 
-# RootBox Packages
-PRODUCT_PACKAGES += \
-    RootBoxPapers \
-    Trebuchet \
-    RootBox \
-    RootBoxOTA
-
-# CM Packages
-PRODUCT_PACKAGES += \
-    audio_effects.conf \
-    DSPManager \
-    libcyanogen-dsp \
-    LockClock
-
-# PA Packages 
-PRODUCT_PACKAGES += \
-    ParanoidPreferences
-
-# RootBox build.prop tweaks
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.enable.amr.wideband=1 \
-    ro.pa.family=$(OVERLAY_TARGET)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
-    ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.error.receiver.system.apps=com.google.android.feedback \
-    ro.com.google.locationfeatures=1 \
-    ro.setupwizard.enterprise_mode=1 \
-    windowsmgr.max_events_per_sec=240 \
-    ro.kernel.android.checkjni=0 \
-    persist.sys.root_access=3
+# Installer
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
+    vendor/rootbox/prebuilt/common/etc/persist.conf:system/etc/persist.conf
 
 PRODUCT_COPY_FILES += \
     vendor/rootbox/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
     vendor/rootbox/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
 
-# Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/rootbox/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/rootbox/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
-
-# ParanoidAndroid Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/prebuilt/preferences/$(TARGET_PRODUCT)
-
-# Allow device family to add overlays and use a same prop.conf
-ifneq ($(OVERLAY_TARGET),)
-    PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/$(OVERLAY_TARGET)
-    PA_CONF_SOURCE := $(OVERLAY_TARGET)
-else
-    PA_CONF_SOURCE := $(TARGET_PRODUCT)
-endif
-
-PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
-    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
 
 # init.d
 PRODUCT_COPY_FILES += \
@@ -93,18 +44,62 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+#Tools
 PRODUCT_PACKAGES += \
+    libsepol \
     openvpn \
     e2fsck \
     mke2fs \
     tune2fs \
-    libssh \
+    bash \
+    nano \
+    htop \
+    powertop \
+    lsof \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
+    ntfsfix \
+    ntfs-3g \
+    gdbserver \
+    micro_bench \
+    oprofiled \
+    sqlite3 \
+    strace
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
     ssh \
     sshd \
-    sshd-config \
+    sshd_config \
     ssh-keygen \
-    sftp \
-    scp
+    start-ssh
+
+#SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+
+# Default ringtone
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=Scarabaeus.ogg \
+    ro.config.notification_sound=Antimony.ogg \
+    ro.config.alarm_alert=Scandium.ogg
+
+# Stagefright FFMPEG plugins
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec \
+    libstagefright_soft_ffmpegvdec \
+    libFFmpegExtractor \
+    libnamparser
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -120,8 +115,7 @@ PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallp
 # T-Mobile theme engine
 include vendor/rootbox/configs/themes_common.mk
 
-# Bring in all audio files
-include frameworks/base/data/sounds/NewAudio.mk
+# World APNs
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
-# Extra Ringtones
-include frameworks/base/data/sounds/AudioPackageNewWave.mk
