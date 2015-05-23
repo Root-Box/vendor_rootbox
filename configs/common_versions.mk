@@ -7,24 +7,24 @@ RB_BRANCH=lollipop
 ifneq ($(RB_BUILD),)
     # RootBox Official properties
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.rootbox.build=$(DATE) \
-        ro.rootbox.version=RootBox-$(TARGET_PRODUCT)-$(RB_BUILD)
+        ro.rb.build=$(DATE) \
+        ro.rb.version=RootBox-$(TARGET_PRODUCT)-$(RB_BUILD)
 else
     ifneq ($(RB_NIGHTLY),)
     # RootBox Nightlies properties
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.rootbox.build=$(DATE) \
-        ro.rootbox.version=RootBox-$(TARGET_PRODUCT)-Nightly-$(DATE)
+        ro.rb.build=$(DATE) \
+        ro.rb.version=RootBox-$(TARGET_PRODUCT)-Nightly-$(DATE)
     else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.rootbox.version=RootBox-$(TARGET_PRODUCT)-Unofficial-$(DATE)
+        ro.rb.version=RootBox-$(TARGET_PRODUCT)-Unofficial-$(DATE)
     endif
 endif
 
 # needed for statistics
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.rootbox.branch=$(RB_BRANCH) \
-        ro.rootbox.device=$(RB_DEVICE)
+        ro.rb.branch=$(RB_BRANCH) \
+        ro.rb.device=$(RB_DEVICE)
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \

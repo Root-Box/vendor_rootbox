@@ -1,8 +1,8 @@
 # Common overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/rb/overlay/common
 
 # Common dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/rb/overlay/dictionaries
 
 # SuperUser
 SUPERUSER_EMBEDDED := true
@@ -24,21 +24,21 @@ PRODUCT_PACKAGES += \
 
 # Installer
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
-    vendor/rootbox/prebuilt/common/etc/persist.conf:system/etc/persist.conf
+    vendor/rb/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
+    vendor/rb/prebuilt/common/etc/persist.conf:system/etc/persist.conf
 
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
-    vendor/rootbox/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
+    vendor/rb/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
+    vendor/rb/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
 
 
 # init.d
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/etc/init.local.rc:root/init.aokp.rc \
-    vendor/rootbox/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
-    vendor/rootbox/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
-    vendor/rootbox/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/rootbox/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/rb/prebuilt/common/etc/init.local.rc:root/init.aokp.rc \
+    vendor/rb/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
+    vendor/rb/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+    vendor/rb/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/rb/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -110,12 +110,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # Inherit common build.prop overrides
--include vendor/rootbox/configs/common_versions.mk
+-include vendor/rb/configs/common_versions.mk
 
 # T-Mobile theme engine
-include vendor/rootbox/configs/themes_common.mk
+include vendor/rb/configs/themes_common.mk
 
 # World APNs
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/rb/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
